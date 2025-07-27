@@ -4,7 +4,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #030014;
+  --color-primary: #030013;
 
   --color-light-100: #cecefb;
   --color-light-200: #a8b5db;
@@ -24,7 +24,7 @@
   body {
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
-    background: #030000;
+    background: #000000;
   }
 
   h1 {
@@ -81,16 +81,35 @@
     @apply w-full bg-light-100/5 px-4 py-3 rounded-lg mt-10 max-w-3xl mx-auto;
 
     & div {
-      @apply  flex items-center justify-center ;
+      @apply flex items-center ;
     }
 
     & img {
-      @apply  absolute bottom-15.5 h-5 w-5;
+      @apply h-5 w-5;
     }
 
     & input {
-      @apply w-full bg-transparent py-2 sm:pr-10 pl-10 text-base text-gray-200 placeholder-light-200 outline-hidden;
+      @apply w-full bg-transparent py-2 sm:pr-10 pl-10 text-base text-gray-500 placeholder-light-100 outline-hidden;
     }
+  }
+
+  .search-input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-input-wrapper img {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+
+  .search-input-wrapper input {
+    padding-left: 44px; /* enough space for the icon */
   }
 
   .all-movies {
@@ -143,7 +162,7 @@
 }
 
 @utility text-gradient {
-  @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
+  @apply bg-linear-to-r from-[#a788ff] to-[#7f4cff] bg-clip-text text-transparent;
 }
 
 @utility fancy-text {

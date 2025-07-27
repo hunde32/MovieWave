@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
-import { useFormState } from 'react-dom'
+import React from "react";
 
-const Search = ({searchTerm, setSearchTerm}) => {
+const Search = ({ searchTerm, setSearchTerm }) => {
   return (
     <div className="search">
-        <img src="search.svg" alt="search"/>
-        <input type="text" placeholder='Search 1000+ Movies'
-         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+      <div className="search-input-wrapper">
+        <img src="search.svg" alt="search" />
+        <input
+          type="text"
+          placeholder="Search 1000+ Movies"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
-       
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;
