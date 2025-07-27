@@ -2,7 +2,6 @@ import React from 'react'
 const MovieCard = ({
   movie: { title, vote_average, poster_path, release_date, original_language },
 }) => {
-  console.log(vote_average);
   return (
     <div className="movie-card">
       <img
